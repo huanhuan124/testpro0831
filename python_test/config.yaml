@@ -1,0 +1,3 @@
+EMAIL:
+ - Smtp_Server: smtp.mxhichina.com
+ - Smtp_Sender: test@tenez.com
