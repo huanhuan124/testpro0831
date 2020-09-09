@@ -1,6 +1,6 @@
 __author__ = 'zenghuan'
 
-from python import control
+from python_test import control
 from python.control import *
 
 def method(a,b=[]):
@@ -21,5 +21,3 @@ print(control.name)
 print(control.big_num)
 control.sum_hundred()
 
-sum_hundred()
-print(name)
