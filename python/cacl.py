@@ -1,7 +1,7 @@
 __author__ = 'zenghuan'
 
 
-class  Cacl():
+class  Cacl:
     def add(self,a, b):
         return a + b
 
