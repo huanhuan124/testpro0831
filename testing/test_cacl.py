@@ -1,33 +1,36 @@
-__author__ = 'zenghuan'
+from python import cacl
 import pytest
 import allure
-from python import cacl
 
-@allure.feature("测试计算器")
-class  TestCacl:
+
+@allure.feature("测试计算器功能")
+class TestCacl:
+
 
     def setup(self):
-        self.ca = cacl.Cacl()
+        self.cal = cacl.Cacl()
 
-
-    @pytest.mark.parametrize(["a","b"],[(1,2),(3,4)])
     @allure.story("测试加法")
-    def test_add(self, a, b):
-        result_add = self.ca.add(a,b)
-        print("a+b的结果是：",result_add)
+    @pytest.mark.parametrize(["a","b","c"],[(1,2,3),(100,200,300),(0,0,0),(-2,-3,-5),(-9,6,-3),(0,-9,-9),(0,4,4)])
+    def test_add(self,a,b,c):
+        self.cal.add(a,b)
+        assert a + b == c
 
 
-    @pytest.mark.parametrize(["a","b"],[(1,0),(2,3),(6,2)])
-    @allure.story("测试除法")
-    def test_div(self,a,b):
-        if b == 0:
-            print("报错，除数不能为0")
-            raise Exception
-        else:
-            result_div = self.ca.div(a,b)
-            print("a/b的结果是：",result_div)
-        # return result_div
+    @allure.story("测试除法的正常情况")
+    @pytest.mark.parametrize(["a", "b", "c"],
+                             [(1, 2, 0.5), (100, 200, 0.5), (0, 1, 0),(-2, -1, 2.0), (-9, 6, -1.5)])
+    def test_div_normal(self,a,b,c):
+        self.cal.div(a,b)
+        assert a/b == c
 
-    def teardown(self):
-        pass
 
+    @allure.story("测试除法的异常情况，除数为0，抛出异常")
+    @pytest.mark.xfail
+    @pytest.mark.parametrize(["a","b"],[(1,0)])
+    def test_div_except(self,a,b):
+        raise ZeroDivisionError
+
+pytest.main()
+# if __name__ == '__main__':
+#     TestCacl()
