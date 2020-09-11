@@ -1,9 +1,11 @@
 __author__ = 'zenghuan'
 
 import pytest
-@pytest.fixture()
+@pytest.fixture(scope="module")
 def login():
     print("这是登录模块，放在conftest文件中")
+    yield
+    print("开始退车浏览器，放在conftest文件中")
 
 
 def pytest_collection_modifyitems(session, config, items):
