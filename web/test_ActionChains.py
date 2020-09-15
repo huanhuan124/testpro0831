@@ -1,4 +1,4 @@
-from selenium.webdriver import ActionChains
+
 
 __author__ = 'zenghuan'
 
@@ -8,7 +8,7 @@ from time import sleep
 from selenium.webdriver.common.by import By
 import pytest
 from selenium.webdriver.common.keys import Keys
-
+from selenium.webdriver import ActionChains
 class Test_ActionChains:
     def setup(self):
         self.driver = webdriver.Chrome()
