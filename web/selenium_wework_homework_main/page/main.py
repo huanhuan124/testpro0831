@@ -1,7 +1,8 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from web.selenium_wework_homework_main.page.addresslist import AddressList
+from web.selenium_wework_homework_main.page.addressbook import AddressBook
+
 
 __author__ = 'zenghuan'
 
@@ -28,6 +29,6 @@ class Main:
         self._driver.find_element_by_xpath('//*[@id="menu_contacts"]').click()
 
 
-        return AddressList(self._driver)
+        return AddressBook(self._driver)
 
 
