@@ -26,9 +26,14 @@ class Main:
         # for elment in elements:
         #     print(elment.get_attribute())
         #不知道怎么定位？？
+        #点击通讯录按钮
         self._driver.find_element_by_xpath('//*[@id="menu_contacts"]').click()
 
 
         return AddressBook(self._driver)
+
+
+    def goto_addmember(self):
+        self._driver.find_element_by_xpath()
 
 

@@ -15,6 +15,12 @@ class AddMember:
         self._driver.find_element_by_id('memberAdd_phone').send_keys('13045678954')
 
         #不知道怎么定位
-        self._driver.find_element_by_xpath('//*[@id="js_contacts58"]/div/div[2]/div/div[4]/div/form/div[3]/a[2]').click()
+        #点击保存按钮
+        #这种xpath的方式第二天就不能用了，不知道为什么
+        # self._driver.find_element_by_xpath('//*[@id="js_contacts58"]/div/div[2]/div/div[4]/div/form/div[3]/a[2]').click()
+        #通过css_selector
+        self._driver.find_element_by_css_selector('.qui_btn.ww_btn.js_btn_save:nth-child(2)').click()
+        #通过xpath
+        # self._driver.find_element_by_xpath('//div[@class="member_edit"]//div[3]//a[2]').click()
         sleep(2)
         self._driver.quit()
