@@ -11,3 +11,6 @@ class Test_addmember:
     def test_addmember(self):
         self.main.goto_addressList().goto_addmember().addmember()
 
+    # def test_addmember2(self):
+    #     self.main.goto_addmember()
+
