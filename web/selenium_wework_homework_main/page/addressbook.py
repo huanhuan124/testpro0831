@@ -13,7 +13,7 @@ class AddressBook(BasePage):
     def goto_addmember(self):
         #click add member
         #//*[@id="js_contacts58"]/div/div[2]/div/div[2]/div[3]/div[1]/a[1]
-        sleep(2)
+        self._driver.implicitly_wait(1)
         #不知道怎么定位？？？
         #点击添加成员按钮
         # self._driver.find_element(By.CSS_SELECTOR,'.qui_btn.ww_btn.js_add_member:nth-child(2)').click()

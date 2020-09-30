@@ -32,7 +32,7 @@ class Main(BasePage):
     _base_url = "https://work.weixin.qq.com/wework_admin/frame"
     def goto_addressList(self):
         #click addresslist
-        sleep(2)
+        # self._driver.implicitly_wait(1)
         #不知道怎么定位？？
         #点击通讯录按钮
         # self._driver.find_element_by_id("menu_contacts").click()
@@ -40,6 +40,18 @@ class Main(BasePage):
         self.find(By.ID,"menu_contacts").click()
 
         return AddressBook(self._driver)
+
+
+    def del_name(self):
+        self.find(By.ID,"menu_contacts").click()
+        elements = self._driver.find_elements_by_css_selector('.ww_checkbox')
+
+
+        text = self.find(By.CSS_SELECTOR,'#member_list>tr:nth-child(1)').text
+        if text == 'acs':
+            self.find(By.CSS_SELECTOR,'.js_delete').click()
+            self.find(By.CSS_SELECTOR,'#__dialog__MNDialog__>div a:nth-child(1)').click()
+
 
 
     # def goto_addmember(self):

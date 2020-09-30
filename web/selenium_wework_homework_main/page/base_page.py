@@ -16,7 +16,7 @@ class BasePage:
             else:
                 self._driver = driver
             # self._driver.get('https://work.weixin.qq.com/wework_admin/frame')
-
+            print(self._base_url+"*********************")
             if self._base_url != "":
                 self._driver.get(self._base_url)
 

@@ -11,7 +11,7 @@ class AddMember(BasePage):
     #     self._driver = driver
 
     def addmember(self):
-        sleep(2)
+        # self._driver.implicitly_wait(1)
         self.find(By.ID,'username').send_keys("acs")
         self.find(By.ID,'memberAdd_acctid').send_keys('a120')
         self.find(By.ID,'memberAdd_phone').send_keys('13045678954')
@@ -28,5 +28,5 @@ class AddMember(BasePage):
         self.find(By.CSS_SELECTOR,'.qui_btn.ww_btn.js_btn_save:nth-child(2)').click()
         #通过xpath
         # self._driver.find_element_by_xpath('//div[@class="member_edit"]//div[3]//a[2]').click()
-        sleep(2)
+        # sleep(2)
         self._driver.quit()
