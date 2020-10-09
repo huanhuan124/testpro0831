@@ -6,15 +6,12 @@ __author__ = 'zenghuan'
 
 class TestEnv_demo(TestCase):
 
-
-
-    data = {
+    def setUp(self):
+        self.data = {
         "method": "get",
         "url": "http://testing:9999/demo_new.txt"
 
     }
-
-    def setUp(self):
         self.demo = Env_demo()
 
     def test_env_request(self):
