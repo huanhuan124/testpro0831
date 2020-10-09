@@ -9,16 +9,17 @@ class Base_api:
     def send(self, data):
         # url = http://127.0.0.1:9999/demo_new.txt
         #读取yaml文件
-
-        env = yaml.safe_load(open("data/env.yaml"))
-
-        print(data['url'])
+        env = self.get_yaml()
         data['url'] = data['url'].replace('testing', env['testing-studio'][env["default"]])
-        print(data['url'])
-        return requests.request(data['method'], data['url'])
+        # return requests.request(data['method'], data['url'])
+        return requests.request(**data)
+
+
+    def get_yaml(self):
+        return yaml.safe_load(open("data/env.yaml"))
 
     #把env的json格式转换为yaml格式并存入yaml文件中
-    def get_yaml(self):
+    def json_to_yaml(self):
         env = {
             "default": "dev",
             "testing-studio": {
