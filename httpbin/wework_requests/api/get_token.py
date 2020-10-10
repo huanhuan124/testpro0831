@@ -19,17 +19,14 @@ class Get_token(Base_api):
     # }
 
     def get_token(self):
-
-        #读取yaml文件，测试信息放在yaml文件中
+        # 读取yaml文件，测试信息放在yaml文件中
         para = {
-            "corpid":"wwed0f3dc9f8233774",
-            "corpsecret":"Pt8SBjBFzFLR-_iq9BxRtk47jw7ayhlmgk567ecCKZ0"
+            "corpid": "wwed0f3dc9f8233774",
+            "corpsecret": "Pt8SBjBFzFLR-_iq9BxRtk47jw7ayhlmgk567ecCKZ0"
         }
 
-        # data = self.get_yaml()
-
+        #得到转换后的参数，用para中的内容替换到data.yml文件中的变量
         data = self.template_to(para)
+        #发起请求
         r = self.send(data)
-        print("test_gettoken******")
-        print(r.content)
         return r

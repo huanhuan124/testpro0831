@@ -15,6 +15,6 @@ class Test_get_token:
 
         # print(res.json())
 
-    #只是用来方便把json转换为yaml
-    # def test_json_to_yaml(self):
-    #     self.token.json_to_yaml()
+   # 只是用来方便把json转换为yaml
+   #  def test_json_to_yaml(self):
+   #      self.token.json_to_yaml()
