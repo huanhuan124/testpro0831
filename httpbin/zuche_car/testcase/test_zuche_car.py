@@ -2,9 +2,6 @@ from httpbin.zuche_car.api.car import Car
 
 __author__ = 'zenghuan'
 
-import yaml
-import requests
-import pytest
 import random
 
 
@@ -13,15 +10,19 @@ class Test_zuche_car:
     def setup(self):
         # 登录接口，每个接口调用之前都需要调用
         self.car = Car()
+        # cookies
         self._cookies = self.car.login()
         print(self._cookies)
+        # 车牌号
         self._vehicleNo = "京P" + str(random.randint(66666, 99999))
         print(self._vehicleNo)
+        # 车架号
         self._frameNo = "PYTHONCAR" + str(random.randint(11111111, 99999999))
         print(self._frameNo)
-        # CAR20201013
+        # CAR20201013发票号
         self._invoiceNo = "PYTHONCAR" + str(random.randint(11, 99))
         print(self._invoiceNo)
+        # 头信息
         self._header = {
             'content-type': 'application/json;charset=UTF-8',
             'Origin': 'http://carvmscoretest.zuche.com/',
@@ -30,9 +31,6 @@ class Test_zuche_car:
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.'
         }
-
-
-
 
     def test_createVehicle(self):
         env = {
