@@ -1,0 +1,27 @@
+assetInfoVo: {allocationStatusName: '', bussLineId: 1, bussLineTime: '', checkResultName: '',
+  firstTransferOwnershipTime: '', isInsideScrapName: '', lastApproveSaleTime: '',
+  vehicleNoBeforeTransfer: '', willBussLineId: '', willBussLineTime: ''}
+baseInfoVo: {brandId: 67, carUseType: 0, checkTime: '', color: 10, companyId: 46,
+  contractNo: PYTHONCAR86877095, engineNo: PYTHONCAR86877095, envStandard: 1, frameNo: PYTHONCAR86877095,
+  modelId: 1221, registerNo: '', useNature: 0, vehicleId: '', vehicleLicensemode: '',
+  vehicleModel300Name: '', vehicleNo: "\u4EACP93666", vehicleRemark: '', vehicleSeriesId: 560,
+  vehiclenoCityId: 1, vehiclenoCityName: "\u5317\u4EAC"}
+colorPo: {interiorColorId: ''}
+createEmpName: null
+createTime: null
+deviceInfoVo: {deviceNo: '', deviceType: '', gps: 0}
+financeInfoVo: {carOwnerId: 32, estimatedRemainderPrice: '', handlePettyExpenses: '',
+  handlePettyIncrementTax: '', incrementTaxExpenses: '100000', invoiceNo: PYTHONCAR45,
+  monthDepreciationRate: '', originalValue: '603000', purchaseDate: '', purchasePrice: '500000',
+  realHandlePrice: '', realSellOutPrice: '', registrationAndPettyExpenses: '1000',
+  remainderPrice: '', taxAmount: '2000', taxInvoiceDate: '', vehicleAndVesselTax: ''}
+garageInfoVo: {lastTimeAttendMile: '', nextTimeAttendMile: '', vehicleFrom: ''}
+modifyEmpName: null
+modifyTime: null
+noInfoPo: {vehicleNoColor: 0}
+operatingInfoVo: {businessType: 1, cityId: '', departmentId: '', firstLevelStatus: 100000,
+  handleTime: '', isHertz: 0, isLease: 0, isUCar: 0, lastQuitRunTime: '', nextInspecteTime: '',
+  nowCityId: '', nowCityName: '', nowDepartmentId: '', oilVolume: null, oilVolumeLatticeNum: 0,
+  onLineTime: '', orderCar: 0, parkCityId: '', parkDeptId: '', regTime: '', runMilesInput: '1000',
+  selfFirstLevelStatus: 100000, shortModelId: 1103, shortModelName: "\u5B9D\u9A6C\
+    BMW9/\u4E09\u53A2/2.8\u81EA\u52A8", ucarRentType: ''}
