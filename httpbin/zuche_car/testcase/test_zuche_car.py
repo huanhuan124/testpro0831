@@ -3,7 +3,7 @@ from httpbin.zuche_car.api.car import Car
 __author__ = 'zenghuan'
 
 import random
-
+import requests
 
 class Test_zuche_car:
 
@@ -149,9 +149,35 @@ class Test_zuche_car:
 
         # res = requests.post(url=url, json=data_yaml, headers=header, cookies=self.cookies)
         res = self.car.send(data)
+
+        assert 0 == res.json()['status']
+
+
+    def test_getCcar(self):
+        data = {
+            "method":"get",
+            "url":"http://carvmscoretest.zuche.com/carvmscore/vehiclemanage/readyrun/vehicleReadyRunVueController/getVehicleReadyRunList.do_",
+            "params":{
+                "field":"",
+                "currentPage":1,
+                "pageSize":10,
+                "keyWord":"",
+                "businessType":""
+            },
+            "cookies":self._cookies,
+            "headers":self._header
+            }
+        # res = self.car.send(data)
+        # res = requests.get("http://carvmscoretest.zuche.com/carvmscore/vehiclemanage/readyrun/vehicleReadyRunVueController/getVehicleReadyRunList.do_",params={
+        #         "field":"",
+        #         "currentPage":1,
+        #         "pageSize":10,
+        #         "keyWord":"",
+        #         "businessType":""
+        #     },headers = self._header,cookies=self._cookies)
+        res = self.car.getCarInfo(data)
         print(res.text)
-
-
+        assert 0 == res.json()['status']
 
 
 

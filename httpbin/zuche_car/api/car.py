@@ -21,3 +21,8 @@ class Car(Base_api):
         lg_res = self.send(data)
         print(lg_res.text)
         return  lg_res.cookies
+
+    def getCarInfo(self,data):
+
+        res = self.send(data)
+        return res
